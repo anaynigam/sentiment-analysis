@@ -36,14 +36,14 @@ TO RUN LOCALLY
 git clone https://github.com/anaynigam/sentiment-analysis.git
 cd sentiment-analysis
 
-2. Create a Virtual Environment
+2. Create a Virtual Environment:
    python -m venv .venv
 
-3. Activate the Virtual Environment
+3. Activate the Virtual Environment:
    Windows: .\.venv\Scripts\activate
    Linux/macOS: source .venv/bin/activate
 
-4. Run Streamlit App
+4. Run Streamlit App:
    streamlit run app.py
    
 📝 License

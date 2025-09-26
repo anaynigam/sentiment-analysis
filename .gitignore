@@ -1,7 +1,6 @@
 # created by virtualenv automatically
 __pycache__/
 *.pkl
-*.csv
 *.log
 .env
 .idea

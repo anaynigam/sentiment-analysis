@@ -77,7 +77,7 @@ def create_synthetic_data():
     return pd.DataFrame({"detail": reviews, "Sentiment": labels})
 
 
-def train_load_model(data="data/Equal.csv",model_dir="models"):
+def train_load_model(model_dir="models"):
     os.makedirs(model_dir,exist_ok=True)
     model_file=os.path.join(model_dir,"nb_model.pkl")
     vectorizer_file=os.path.join(model_dir,"tfidf.pkl")
@@ -92,7 +92,8 @@ def train_load_model(data="data/Equal.csv",model_dir="models"):
 
 
         return nb, tfidf, le, metrics
-
+    BASE_DIR=os.path.dirname(__file__)
+    data=os.path.join(BASE_DIR,"..","data","Equal.csv")
     df=pd.read_csv(data,encoding="latin1")
     df['detail']=df['Summary']+' '+df['Review']
     df=df[['detail','Sentiment']]
